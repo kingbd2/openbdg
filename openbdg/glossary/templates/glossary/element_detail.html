@@ -1,0 +1,10 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+<h1>{{ names }}</h1>
+<p>{{ names.definition }}</p>
+<p>{{ names.source_system }}</p>
+<p>Source detail: {{ names.source_detail }}</p>

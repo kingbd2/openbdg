@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Business Data Glossary</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+      <h1>Business Data Glossary</h1>
+      <h2>The following is a list of data elements in your Business Data Glossary. Click on a title to see details about the element.</h2>
+      {% if names %}
+          <ul>
+          {% for name in names %}
+              <p><a href=element_detail.html>{{ name.element_name }}</a></p>
+          {% endfor %}
+          </ul>
+      {% else %}
+          <p>No elements are available.</p>
+      {% endif %}
+    </body>
+</html>
