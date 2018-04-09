@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>OpenBDG Items</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="apple-touch-icon" sizes="180x180" href="/src/content/favicons/apple-touch-icon.png">
+        <!-- <link rel="icon" type="image/png" sizes="32x32" href="/src/content/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/src/content/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/src/content/favicons/manifest.json"> -->
+        <meta name="theme-color" content="#ffffff">
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+    </head>
+
+    <script type="text/javascript">
+    $(document).on("scroll",function(){
+        if($(document).scrollTop()>100){
+            $("header").removeClass("large").addClass("small");
+        } else{
+            $("header").removeClass("small").addClass("large");
+        }
+    });
+    </script>
+
+    <header class=“large”>
+      <nav>
+
+      <ul class="solidblockmenu">
+        <!-- <img class=“logo” src='../../static/blog/images/me.jpg'></img> -->
+        <li><a href="/polls">OpenBDG</a></li>
+        <li><a href="/inventory_explorer">Glossary List</a></li>
+        <li><a href="/visualizer">Explore Data</a></li>
+        <li><a href="/blog">RACI</a></li>
+        <li><a href="/about">Help</a></li>
+      </ul> </nav>
+      </header>
+
+    <div class="intro">
+      <div class="name">Open Business Data Glossary</div>
+      <div class="header-description">
+        <div class="description-item">Find</div>
+        <div class="description-item">Your</div>
+        <div class="description-item">Data</div>
+      </div>
+    </div>
+
+    <body>
+      {% block body %} {% endblock %}
+    </body>
+    <footer>
+
+    </footer>
+</html>

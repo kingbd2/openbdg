@@ -1,0 +1,338 @@
+//
+// Global element rules
+//
+// Elements, that needs to be styled globally, should be styled here.
+// Only native html elements/selectors should be here, if you have class styled in this file - consider separating it to another file.
+
+html,
+body {
+    height: 100%;
+    // margin: 10;
+    // padding: 10;
+    width: 100%;
+}
+
+body {
+  // margin: 5%;
+  padding: 0;
+  font-size: 1.8rem;
+  font-family: 'Helvetica', sans-serif;
+  color: $primary;
+  // background-image: url('blog/images/boat.png');
+  // background-attachment:fixed;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+}
+
+header {
+  display: flex;
+  align-self: center;
+  align-items: right;
+  justify-content: space-around;
+  // align-items: center;
+  // padding: 10px;
+  // float: left;
+  font-family: $font-main;
+  // height: 50%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  // background-color: $main-color;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  // justify-self: center;
+  float: left;
+  width: 100%;
+  margin: 0 auto;
+
+  align-self: center;
+  align-items: right;
+  justify-content: space-around;
+
+}
+
+header.large{ height: 150px; }
+header.large img{ width: 200px; height: height; }
+header.large li{ margin-top: 45px; }
+
+header.small{ height: 50px; opacity: 0.8;}
+header.small img{ width: 100px; height: auto; margin-top: -10px; }
+header.small li{ margin-top: 17px;}
+
+.solidblockmenu{
+  display: flex;
+  align-self: left;
+  align-items: left;
+  justify-content: space-around;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 10px;
+    float: left;
+    font-family: $font-main;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    margin-bottom: 2em;
+    position: fixed;
+    // border: 1px solid $secondary;
+    background: $primary;
+    // border-width: 1px 0;
+}
+
+.solidblockmenu li{
+    display: inline;
+}
+
+.solidblockmenu li a{
+    float: left;
+    color: $primary;
+    padding: 12px 11px;
+    text-decoration: none;
+    // border-right: 1px solid white;
+}
+
+.solidblockmenu li a:visited{
+    color: $white;
+}
+
+.solidblockmenu li a:hover, .solidblockmenu li{
+    color: $primary;
+}
+
+
+
+.intro {
+  display: flex;
+  align-items: right;
+  justify-content: space-around;
+  padding: 10px;
+  font-family: $font-main;
+  height: 15%;
+  width: 100%;
+  margin-bottom: 200px;
+  margin-top: 300px;
+
+
+
+  // margin-top: 10px;
+  // background-color: $main-color;
+}
+
+.name {
+  align-self: flex-end;
+  color: $dark;
+  font-family: $font-peace;
+  margin-left: 5%;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 50%;
+  padding: 30px;
+  background-color: $white;
+  // opacity: 0.8;
+  width: auto;
+}
+
+.header-description {
+  align-self: center;
+  font-size: 1.4rem;
+  font-family: $font-peace;
+  margin-left: 5%;
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.description-item {
+  color: $primary;
+  font-size: 1.2rem;
+  font-family: $font-peace;
+  margin-left: 5%;
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 20px;
+  background-color: $white;
+  opacity: 0.8;
+  z-index: 999;
+}
+.description-item:hover {
+  background-color: $dark;
+  color: $primary
+}
+@-webkit-keyframes name {
+    100% {color:$yellow;}
+    0% {color: $primary; }
+    50% {color:$yellow;}
+}
+
+
+
+header,nav, a, img, li{
+  transition: all 1s;
+  -moz-transition: all 1s; /* Firefox 4 */
+  -webkit-transition: all 1s; /* Safari and Chrome */
+  -o-transition: all 1s; /* Opera */
+}
+
+h1 {
+  align-self: flex-end;
+  color: $yellow;
+  font-family: $font-peace;
+  margin-left: 5%;
+  font-size: 5rem;
+  font-weight: bold;
+  // margin-top: 120px;
+}
+
+
+
+h2 {
+  color: $primary;
+  font-size: 1.4rem;
+  font-family: $font-peace;
+  margin-left: 5%;
+  margin-top: 5%;
+  // margin-bottom: 48px;
+  // border-bottom: 2px solid #DEE2E5;
+}
+
+h3 {
+  color: $primary;
+  font-size: 1.4rem;
+  font-family: $font-peace;
+  box-shadow: 0 0 12px hsla(0,0%,0,0.2);
+  padding: 12px 10px;
+  background-color: $white;
+  margin-bottom: 50px;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  opacity: 0.8;
+  // border-top: 1px solid $primary;
+}
+
+.container-items {
+     @include display-grid;
+     grid-template-columns: repeat(2, 1fr);
+     margin-left: 5%;
+     margin-right: 5%;
+     margin-bottom: 10px;
+     padding: 50px;
+     background-color: $white;
+     border-top: 2px solid $dark;
+}
+
+
+
+// [disabled] {
+//     cursor: not-allowed;
+// }
+
+ul {
+  display: flex;
+  align-self: center;
+  justify-self: stretch;
+}
+
+ol {
+
+}
+
+figure {
+
+}
+
+strong {
+
+}
+
+em {
+
+}
+
+p {
+  font-size: 1.4rem;
+  font-family: $font-peace;
+  color: $secondary;
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+
+}
+
+.title{
+  font-size: 2rem;
+  font-family: $font-peace;
+  color: $black;
+  font-weight: bold;
+  align-self: center;
+  justify-self: left;
+}
+
+.text {
+  font-size: 1rem;
+  font-family: $font-peace;
+  color: $primary;
+  font-weight: bold;
+  align-self: center;
+  justify-self: left;
+  line-height: 1.6;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: $white;
+}
+
+.date {
+  font-size: 1.2rem;
+  font-family: $font-peace;
+  color: $secondary;
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+}
+
+hr {
+
+}
+
+img {
+    // max-width: 15%;
+    height: 100%;
+}
+
+a {
+  color: $black;
+}
+
+a:link    {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  }
+a:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  }
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  none;
+  font-weight:      bold;
+  background-color: $secondary;
+  }
+a:active  {
+  /* Applies to activated links */
+  text-decoration:  underline;
+  font-weight:      bold;
+  }
+
+table {
+    //border-collapse: collapse;
+    //table-layout: fixed;
+    width: 100%;
+}
